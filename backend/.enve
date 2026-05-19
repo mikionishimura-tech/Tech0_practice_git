@@ -1,0 +1,29 @@
+# ─────────────────────────────────────────────
+# .env.example
+# このファイルを .env にコピーして使う
+# .env は .gitignore に追加済みのため Git にコミットされない
+# ─────────────────────────────────────────────
+
+# ── DB切り替え ───────────────────────────────
+# false: SQLite（ローカル開発）
+# true : Azure DB for MySQL（本番）
+USE_MYSQL=true
+SQLITE_PATH=tech0_search.db
+
+
+# ── SQLite 設定（USE_MYSQL=false のとき使用）──
+SQLITE_PATH=tech0_search.db
+
+# ── MySQL 設定（USE_MYSQL=true のとき使用）────
+# Azure DB for MySQL の接続情報
+DB_HOST=tech0-search-db-class12.mysql.database.azure.com
+DB_USER=admin_class12
+DB_PASSWORD=uQ4fp#1v
+DB_NAME=tech0search_micky
+
+
+# ── CORS 設定 ────────────────────────────────
+# Next.js のURL（カンマ区切りで複数指定可）
+# 開発: http://localhost:3000
+# 本番: https://your-app.azurestaticapps.net
+CORS_ORIGINS=http://localhost:3000
